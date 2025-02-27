@@ -160,7 +160,7 @@ npx create-next-app@latest . -- 15버전 설치(최신버전)
 - http://localhost:3000
 
 ```tsx
-export default function Main() {
+export default function Home() {
   return <h1>메인 페이지</h1>;
 }
 ```
