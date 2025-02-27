@@ -1,10 +1,11 @@
 import "@/styles/globals.css";
 import type { AppProps } from "next/app";
+import Header from "@/components/Header";
 
 export default function App({ Component, pageProps }: AppProps) {
   return (
     <>
-      <header>상단</header>
+      <Header />
       <Component {...pageProps} />
       <footer>하단</footer>
     </>
