@@ -27,8 +27,7 @@ export default function Home() {
 ```
 
 ## Next에서는 module css만 page에 연결할 수 있다.
-
-- `index.module.css`로 파일명 수정
+- `/src/pages/index.module.css`로 파일명 수정
 - /src/pages/index.tex
 
 ```tsx
