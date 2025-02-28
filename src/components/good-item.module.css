@@ -1,0 +1,14 @@
+.wrapper {
+  display: flex;
+  gap: 25px;
+  align-items: center;
+  padding: 20px 0px;
+  border-bottom: 1px solid #eee;
+}
+.wrapper img {
+  max-width: 80px;
+}
+.wrapper h5 {
+  margin-bottom: 20px;
+  font-weight: bold;
+}

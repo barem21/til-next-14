@@ -1,0 +1,31 @@
+.wrapper {
+  display: block;
+}
+.wrapper h2 {
+  display: none;
+}
+.wrapper .primage {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 40px;
+}
+.wrapper .primage img {
+  max-height: 350px;
+}
+.wrapper .prinfo h4 {
+  margin-bottom: 20px;
+  font-size: 24px;
+}
+.wrapper .category {
+  font-size: 0.85em;
+}
+.wrapper .prinfo .description {
+  margin-bottom: 20px;
+  color: #999;
+}
+.wrapper .prprice {
+  margin-bottom: 10px;
+  font-weight: bold;
+}
