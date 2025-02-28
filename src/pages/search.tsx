@@ -7,10 +7,9 @@ function Page() {
   //console.log(router);
 
   return (
-    <div>
-      <span style={{ fontWeight: "bold" }}>&quot;{keyword}&quot;</span> 검색
-      결과
-    </div>
+    <h1>
+      <span style={{ fontWeight: "bold" }}>&quot;{keyword}&quot;</span> 검색 결과
+    </h1>
   );
 }
 

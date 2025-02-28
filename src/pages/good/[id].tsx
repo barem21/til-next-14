@@ -6,10 +6,9 @@ function Page() {
   console.log(router);
 
   return (
-    <div>
-      <span style={{ fontWeight: "bold" }}>&quot;product {id}&quot;</span>{" "}
-      제품정보
-    </div>
+    <h1>
+      <span style={{ fontWeight: "bold" }}>&quot;product {id}&quot;</span> 제품정보
+    </h1>
   );
 }
 

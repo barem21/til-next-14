@@ -1,35 +1,41 @@
-# api 폴더의 이해
+# css
 
-- Next는 서버이다.
-- `흔히` FE는 Next구현 후 Vercel, AWS에 배포한다.
-- `흔히` BE는 AWS에 배포한다.
-  - BE는 API를 제공한다(request > DB > Response).
-  - Postman, Swagger, Excel
-  - Next도 서버라서 API연결이 가능하다.
-    - request > DB > Response
-    - 직접 DB쿼리도 가능하다.
-- `흔희` DB는 AWS에 배포한다.
+## inline stylesheet
 
-- api 용도이다.
-- http://localhost:3000/api/hello
-- https://fakestoreapi.com
+- /src/pages/index.tsx
 
-## api 만들어보기
+## 외부 css연결 파일 (Next에서는 page 연결할 수 없음)
 
-- /src/pages/api/getallgood.ts
-- http://localhost:3000/api/getallgood
+- /src/pages/index.css
+- `_app.tsx` 이외에는 절대로 사용할 수 없다.
 
-```ts
-// Next.js API route support: https://nextjs.org/docs/api-routes/introduction
-import type { NextApiRequest, NextApiResponse } from "next";
+```css
+.title {
+  text-decoration: none;
+}
+```
 
-type Data = {
-  name: string;
-};
+- /src/pages/index.tex
 
-export default async function handler(req: NextApiRequest, res: NextApiResponse<Data>) {
-  const data = await fetch("https://fakestoreapi.com/products");
-  const json = await data.json();
-  res.status(200).json(json);
+```tsx
+/* 아래코드는 오류가 발생됨 */
+import "./index.css";
+
+export default function Home() {
+  return <h1 style={{ color: "#666" }}>메인 페이지</h1>;
+}
+```
+
+## Next에서는 module css만 page에 연결할 수 있다.
+
+- `index.module.css`로 파일명 수정
+- /src/pages/index.tex
+
+```tsx
+/* 아래코드는 정상적용됨 */
+import styles from "./index.module.css";
+
+export default function Home() {
+  return <h1 className={styles.title}>메인 페이지</h1>;
 }
 ```
